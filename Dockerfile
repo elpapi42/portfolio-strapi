@@ -2,8 +2,7 @@ FROM node:12-slim
 
 WORKDIR /strapi
 
-COPY package.json ./
-COPY yarn.lock ./
+COPY package*.json ./
 RUN npm install
 
 COPY . .
