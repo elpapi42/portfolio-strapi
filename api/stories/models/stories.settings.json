@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stories",
+  "info": {
+    "name": "Stories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
